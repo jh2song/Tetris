@@ -16,6 +16,7 @@ int main()
 {
 	gameInfo GameInfo;
 	int i;
+	AdminSession();	// 관리자 세션
 	Login(&GameInfo); // 로그인 세션
 	Init(&GameInfo); // 초기화
 
@@ -44,6 +45,8 @@ int main()
 			break;
 	}
 	system("cls");
-	Rank(GameInfo.name, GameInfo.score); // 랭킹 처리 세션으로 넘어감
+	RankSession(GameInfo.name, GameInfo.score); // 랭킹 처리 세션으로 넘어감
+	system("cls");
+	
 	return 0;
 }
