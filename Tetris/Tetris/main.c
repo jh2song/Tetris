@@ -16,6 +16,7 @@ int main()
 {
 	gameInfo GameInfo;
 	int i;
+	MakeEmptyFile(); // score.txt가 없을 시 만들어주는 함수
 	AdminSession();	// 관리자 세션
 	Login(&GameInfo); // 로그인 세션
 	Init(&GameInfo); // 초기화

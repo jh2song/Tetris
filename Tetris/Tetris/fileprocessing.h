@@ -5,6 +5,8 @@ typedef struct _ranking {
 	char name[50];
 	int score;
 }RankInfo;
+void MakeEmptyFile();
+
 void AdminSession();
 
 void PrintFILE(); // FILEÀ» Ãâ·Â

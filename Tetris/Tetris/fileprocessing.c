@@ -6,6 +6,17 @@
 #include "fileprocessing.h"
 #include "playFunc.h"
 
+void MakeEmptyFile() // 파일이 없을 시 만들어 주는 함수
+{
+	FILE *f;
+	if (fopen_s(&f, "score.txt", "r"))
+	{
+		fopen_s(&f, "score.txt", "w");
+		fclose(f);
+		return;
+	}
+	fclose(f);
+}
 // 파일 출력 서식 : "%10s%20s%10s\n"
 void AdminSession()
 {
@@ -90,10 +101,10 @@ void PrintFILE()
 
 	if (fopen_s(&f, "score.txt", "r"))
 	{
-		printf("파일을 열 수가 없습니다.");
-		fclose(f);
-		return;
+		printf("파일이 열리지 않습니다.");
+		exit(1);
 	}
+
 	puts("===============================================");
 	printf("%10s%20s%10s\n", "랭킹", "이름", "점수");
 	puts("===============================================");
@@ -104,6 +115,7 @@ void PrintFILE()
 		fgets(line, 100, f);
 	}
 	fclose(f);
+	
 }
 
 void FILEToDB(RankInfo *DB, int *DBsize)
@@ -198,7 +210,7 @@ void PrintDB(RankInfo *DB, int *DBsize)
 void FindandRemove(RankInfo *DB, int *DBsize, int ranking)
 {
 	int i;
-	if (ranking > *DBsize)
+	if (ranking > *DBsize || ranking <= 0)
 		return;
 	for (i = ranking - 1; i < *DBsize - 1; i++)
 	{
