@@ -1,5 +1,5 @@
 #ifndef __PLAY_FUNC_H__
-
+#define __PLAY_FUNC_H__
 typedef struct _gameInfo
 {
 	char name[50];

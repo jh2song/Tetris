@@ -1,4 +1,5 @@
 #ifndef __FILE_PROCESSING_H__
+#define __FILE_PROCESSING_H__
 #include <stdio.h>
 typedef struct _ranking {
 	int ranking;
