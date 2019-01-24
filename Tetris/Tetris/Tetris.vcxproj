@@ -18,6 +18,15 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="fileprocessing.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="playFunc.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="fileprocessing.h" />
+    <ClInclude Include="playFunc.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{44DC2135-A17C-4063-9C0D-5A86086C3004}</ProjectGuid>
@@ -102,6 +111,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\MASTER\Desktop\TetrisInC-master\TetrisInC-master\Tetris\Tetris;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -142,15 +152,6 @@
       <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="fileprocessing.c" />
-    <ClCompile Include="fileprocessing.h" />
-    <ClCompile Include="main.c" />
-    <ClCompile Include="playFunc.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="playFunc.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
