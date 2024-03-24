@@ -5,6 +5,9 @@
 
 ※ 영상 초반은 관리자 모드에서 랭킹 보드를 삽입, 삭제, 갱신 하는걸 처리하였고, 그 후 테트리스 인게임 영상을 시연하였습니다.
 
+## 소스코드
+[소스코드 경로](https://github.com/jh2song/Tetris/tree/master/Tetris/Tetris)
+
 ## 개발환경
 - Visual Studio 2017
   
